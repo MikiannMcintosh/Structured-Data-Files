@@ -1,0 +1,44 @@
+# Structured-Data-Files
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Address {
+    string streetName;
+    int houseNumber;
+    string city;
+    string state;
+    int zipCode;
+    string country;
+};
+
+struct Student {
+    string name;
+    string studentId;
+    double socialSecurityNumber;
+    int grade;
+    string email;
+    Address studentAddress;
+};
+
+int main() {
+    // Create a new student
+    Student registeringStudent = {"Jarrod Placide", "0232", 7232323, 2, "jarrod.raymond@baruch.cuny.edu"};
+    Student registeringStudent2 = {"Jarrod Placide", "2302"};
+
+    // Assign student info
+    registeringStudent.name = "Jarrod";
+    registeringStudent.studentId = "0119947";
+    registeringStudent.socialSecurityNumber = 2038293202;
+    registeringStudent.grade = 3;
+    registeringStudent.email = "jpraymond@gmail.com";
+
+
+    // Set Students Address
+    registeringStudent.studentAddress.houseNumber = 101;
+    registeringStudent.studentAddress.city = "New York";
+
+
+    return 0;
+}
