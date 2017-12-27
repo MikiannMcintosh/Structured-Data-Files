@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Address {
+    string streetName;
+    int houseNumber;
+    string city;
+    string state;
+    int zipCode;
+    string country;
+};
+
+struct Student {
+    string name;
+    string studentId;
+    double socialSecurityNumber;
+    int grade;
+    string email;
+    Address studentAddress;
+    double phoneNumbers[2];
+};
+
+void displayStudentRecord(const Student &studentToDisplay) {
+    cout << "Student Name: " << studentToDisplay.name << endl;
+    cout << "Student ID: " << studentToDisplay.studentId << endl;
+    cout << "Student Social Security Number: " << studentToDisplay.socialSecurityNumber << endl;
+    cout << "Student E-Mail: " << studentToDisplay.email << endl;
+}
+
+Student getStudentInput() {
+    Student inputStudent;
+
+    cout << "Enter a student's name: ";
+    cin >> inputStudent.name;
+    cout << "Enter a student's ID: ";
+    cin >> inputStudent.studentId;
+    cout << "Enter student's social security number: ";
+    cin >> inputStudent.socialSecurityNumber;
+    cout << "Enter student e-mail: ";
+    cin >> inputStudent.email;
+
+    return inputStudent;
+}
+
+int main() {
+    // An Array of Structs
+    //Student cisClass[30];
+    Student enteredStudent = getStudentInput();
+
+    
+    // Show Student Record
+    
+    displayStudentRecord(enteredStudent&);
+}
